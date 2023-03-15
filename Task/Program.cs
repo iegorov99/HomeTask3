@@ -19,8 +19,8 @@ double Dist(int[] array1, int[] array2, int num)
     return res;
 }
 
-
-
+try
+{
 Console.Write("Введите количество измерений: ");
 int num = Convert.ToInt32(Console.ReadLine());
 if (num < 2)
@@ -41,5 +41,10 @@ else
         Console.Write("Введите координаты второй точки: ");
         array2[p] = Convert.ToInt32(Console.ReadLine());
     }
-    Console.WriteLine(Dist(array1, array2, num));
+    Console.WriteLine(Math.Round(Dist(array1, array2, num), 2));
+}
+}
+catch
+{
+    Console.WriteLine("Введено некорректное число");
 }
